@@ -1,11 +1,9 @@
-/* Reset some default styling */
 body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Styling for the body */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -13,12 +11,11 @@ body {
   background-color: #f9f9f9;
 }
 
-/* Header styling */
 header {
-  background-color: #ffefd5; 
+  background-color: #ffefd5;
   text-align: center;
   padding: 1rem;
-  border-bottom: 2px solid #ffa07a; 
+  border-bottom: 2px solid #ffa07a;
 }
 
 header h1 {
@@ -27,9 +24,8 @@ header h1 {
   margin-bottom: 0.5rem;
 }
 
-/* Navigation bar styling */
 nav {
-  background-color: #ffa07a; 
+  background-color: #ffa07a;
   width: 100%;
 }
 
@@ -52,10 +48,9 @@ nav ul li a {
   color: white;
   padding: 0.5rem;
   display: block;
-  transition: background 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Main content styling */
 main {
   display: flex;
   justify-content: center;
@@ -68,7 +63,7 @@ main {
   max-width: 1200px;
   width: 100%;
   gap: 2rem;
-  flex-wrap: wrap; /* Ensures content stacks on small screens */
+  flex-wrap: wrap;
 }
 
 .intro-text {
@@ -86,7 +81,6 @@ main {
   line-height: 1.8;
 }
 
-/* Intro image */
 .intro-image {
   flex: 1;
   display: flex;
@@ -101,7 +95,6 @@ main {
   border-radius: 10px;
 }
 
-/* Footer */
 footer {
   text-align: center;
   background-color: #ffefd5;
@@ -114,28 +107,27 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* Media Queries for Mobile and Small Screens */
 @media screen and (max-width: 768px) {
   header h1 {
-    font-size: 2rem; /* Smaller header size on mobile */
+    font-size: 2rem;
   }
 
   nav ul {
-    flex-direction: column; /* Stack navigation items vertically */
+    flex-direction: column;
   }
 
   nav ul li {
-    margin-bottom: 0.5rem; /* Add space between nav items */
+    margin-bottom: 0.5rem;
   }
 
   .intro-section {
-    flex-direction: column; /* Stack the text and image vertically */
-    padding: 1rem; /* Reduce padding on smaller screens */
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .intro-text {
     flex: none;
-    text-align: center; /* Center text */
+    text-align: center;
     margin-bottom: 1rem;
   }
 
@@ -145,22 +137,26 @@ footer p {
   }
 
   .intro-image img {
-    width: 100%; /* Ensure image is fully responsive */
+    width: 100%;
   }
 
   .intro-text p {
-    font-size: 0.9rem; /* Slightly smaller font for better readability on small screens */
+    font-size: 0.9rem;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .intro-section {
+    flex-direction: column-reverse;
+  }
+
   nav ul li a {
-    font-size: 1rem; /* Reduce font size for extra-small screens */
-    padding: 0.8rem; /* Adjust padding for mobile navigation */
+    font-size: 1rem;
+    padding: 0.8rem;
   }
 
   footer p {
-    font-size: 0.8rem; /* Smaller footer text */
+    font-size: 0.8rem;
   }
 }
 
