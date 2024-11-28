@@ -1,117 +1,168 @@
 /* Reset some default styling */
 body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Styling for the body */
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-  }
-  
-  /* Header styling */
-  header {
-    background-color: #ffefd5; 
-    text-align: center;
-    padding: 1rem;
-    border-bottom: 2px solid #ffa07a; 
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Header styling */
+header {
+  background-color: #ffefd5; 
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 2px solid #ffa07a; 
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ff4500;
+  margin-bottom: 0.5rem;
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: #ffa07a; 
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+nav ul li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  padding: 0.5rem;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Main content styling */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.intro-section {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap; /* Ensures content stacks on small screens */
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-text h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Intro image */
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ffa07a;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #ffefd5;
+  padding: 1rem;
+  border-top: 2px solid #ffa07a;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Media Queries for Mobile and Small Screens */
+@media screen and (max-width: 768px) {
   header h1 {
-    font-size: 3rem;
-    color: #ff4500; 
-    margin-bottom: 0.5rem;
+    font-size: 2rem; /* Smaller header size on mobile */
   }
-  
-  /* Navigation bar styling */
-  nav {
-    background-color: #ffa07a;
-    width: 100%;
-  }
-  
+
   nav ul {
-    display: flex;
-    justify-content: space-around; /* Space items evenly across the bar */
-    list-style: none;
-    margin: 0;
-    padding: 0.5rem 0;
+    flex-direction: column; /* Stack navigation items vertically */
   }
-  
+
   nav ul li {
-    flex-grow: 1; /* Ensures items are spaced equally */
-    text-align: center;
+    margin-bottom: 0.5rem; /* Add space between nav items */
   }
-  
-  nav ul li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: white;
-    padding: 0.5rem;
-    display: block;
-    transition: background 0.3s ease, color 0.3s ease; /* Smooth hover transition */
-  }
-  
-  /* Main content styling */
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 2rem;
-  }
-  
+
   .intro-section {
-    display: flex;
-    max-width: 1200px;
-    width: 100%;
-    gap: 2rem;
+    flex-direction: column; /* Stack the text and image vertically */
+    padding: 1rem; /* Reduce padding on smaller screens */
   }
-  
-  /* Intro text */
+
   .intro-text {
-    flex: 1;
-  }
-  
-  .intro-text h2 {
-    font-size: 2rem;
-    color: #333;
+    flex: none;
+    text-align: center; /* Center text */
     margin-bottom: 1rem;
   }
-  
-  .intro-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-  }
-  
-  /* Intro image */
+
   .intro-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .intro-image img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ffa07a;
-    border-radius: 10px;
-  }
-  
-  /* Footer */
-  footer {
+    flex: none;
     text-align: center;
-    background-color: #ffefd5;
-    padding: 1rem;
-    border-top: 2px solid #ffa07a;
-    margin-top: 2rem;
   }
-  
+
+  .intro-image img {
+    width: 100%; /* Ensure image is fully responsive */
+  }
+
+  .intro-text p {
+    font-size: 0.9rem; /* Slightly smaller font for better readability on small screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav ul li a {
+    font-size: 1rem; /* Reduce font size for extra-small screens */
+    padding: 0.8rem; /* Adjust padding for mobile navigation */
+  }
+
   footer p {
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Smaller footer text */
   }
+}
+
   
   
