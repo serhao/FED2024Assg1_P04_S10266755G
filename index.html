@@ -1,124 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>repl.it</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
-	<style>
-    body{
-      background:gray;
-    }
-		.container {
-			display: flex;
-			width: 100%;
-			background-color: #fff;
-			flex-wrap: wrap;
-			/*wrap flex items to a new row if not enough space */
-
-		}
-
-		/* flex item of 20% per item */
-		.flex-item {
-			padding: 2%;
-			flex-grow: 1;
-			flex-basis: 15%;
-			/* 15% for borders*/
-
-			display: flex;
-			flex-direction: column;
-			/* so child elements can use flexbox stuff too! */
-			/* switching on borders will force the 5th flex item to move down*/
-			border: 1px solid #D3D3D3;
-
-
-			/* let's set random images if we want to create cover images */
-			/*
-      background-image: url("https://picsum.photos/400/400");
-      background-size: cover;
-      */
-		}
-
-		.flex-img img {
-			max-width: 100%;
-		}
-
-		.flex-info {
-			margin-top: auto;
-		}
-
-		@media (max-width: 920px) {
-			.flex-item {
-			flex: 1 45%;
-      flex-grow : inherit
-			}
-      /* This is a flex shorthand */
-      /* we set 
-        flex-grow: 1; 
-        flex-basis: 21%;
-        Flex shorthand: https://developer.mozilla.org/en-US/docs/Web/CSS/flex
-        Understand flex grow: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
-      */
-		}
-
-    img{
-      width: 400px;
-    }
-
-
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qi Xiang's Cat Cafe</title>
+  <link rel="stylesheet" href="mainpage.css">
 </head>
-
 <body>
-	<section class="container">
-		<div class="flex-item">
-			<div class="flex-img">
-				<img src="https://picsum.photos/400/400">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    <div class="flex-item">
-       <div class="flex-img">
-        <img src="https://picsum.photos/400/400">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    <div class="flex-item">
-       <div class="flex-img">
-        <img src="https://picsum.photos/400/400">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    <div class="flex-item">
-     <div class="flex-img">
-        <img src="https://picsum.photos/400/400">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    <div class="flex-item">
-      <div class="flex-img">
-        <img src="https://picsum.photos/400/400">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-	</section>
+  <header>
+    <!-- Main title -->
+    <h1>Qi Xiang's Cat Cafe</h1>
+  </header>
 
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="meet-the-cats.html">Meet the Cats</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="events.html">Events</a></li>
+    </ul>
+  </nav>
 
+  <main>
+    <section class="intro-section">
+      <div class="intro-text">
+        <h2>Welcome to our cozy cafe!</h2>
+        <p>
+          This cat cafe, founded by Tee Qi Xiang in the 1990s, features many
+          stray rescued cats all around Singapore! We provide these cats with food, water, 
+          shelter, as well as regular medical checkups to ensure that they are at the peak 
+          of health. Most of our cats are also up for adoption, so in case you fall
+          in love with one of our cats during your visit here, do check out our events page
+          to see whether there are any adoption events ongoing!
+          Thank you for supporting our cafe, and we hope that you have the best
+          experience here!    
+        </p>
+
+      </div>
+      <div class="intro-image">
+        <img src="hq720.jpg" alt="Cats in the Cafe">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Qi Xiang's Cat Cafe All Rights Reserved.</p>
+  </footer>
+
+  <script src="mainpage.js"></script>
 </body>
-
 </html>
+
