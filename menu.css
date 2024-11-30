@@ -62,30 +62,44 @@
     height: 200px;  /* Set a fixed height for consistency */
     position: relative;  /* So price can be positioned correctly */
   }
-/* Back Button Container */
+/* Back Button */
 .back-button-container {
-  display: block;
-  padding-left: 20px;
-  margin: 20px 0;  /* Adds vertical spacing */
+  margin: 10px 20px;
+  display: flex;
+  justify-content: flex-start; /* Align the button to the left */
 }
 
-/* Back Button Styling */
 .back-button {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
-  text-align: center;
-  color: #fff;
+  color: white;
   background-color: #4b3621;
   border: 2px solid #ffcc99;
   border-radius: 8px;
   text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  margin-left: 0;  /* Ensure no margin pushes it to center */
-  text-align: left;  /* Align text to the left */
+  transition: transform 0.3s, background-color 0.3s;
 }
+
+.back-button:hover {
+  background-color: #ffcc99;
+  color: #4b3621;
+  transform: scale(1.05);
+}
+
+.back-button:active {
+  background-color: #dba676;
+  transform: scale(0.95);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .back-button-container {
+    justify-content: center; /* Center the button on smaller screens */
+  }
+}
+
 /* Footer Styling */
 .footer {
     background-color: #4b3621;
