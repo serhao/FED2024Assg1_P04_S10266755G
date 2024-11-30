@@ -1,0 +1,125 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ffcc99;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #4b3621;
+}
+
+/* Menu grid layout for flexible columns */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Category section */
+.menu-category {
+    width: 100%;
+}
+
+/* Category headers */
+.menu-category h2 {
+    font-size: 2rem;
+    color: #4b3621;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Menu item styling */
+.menu-item {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: 300px auto 100px; /* Fixed image size, content, and price */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between columns */
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Full width of container */
+    max-width: 800px; /* Limit maximum width */
+    padding: 10px;
+    margin: 0 auto; /* Center items */
+}
+
+/* Menu item hover effects */
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(255, 153, 51, 0.6);
+}
+
+/* Menu image */
+.menu-item img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover; /* Ensures consistent aspect ratio */
+}
+
+/* Menu info */
+.menu-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-info h3 {
+    font-size: 1.2rem;
+    color: #4b3621;
+    margin-bottom: 5px;
+}
+
+.menu-info p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px; /* Space between description and price */
+}
+
+/* Price Section */
+.menu-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4b3621;
+    text-align: center; /* Center text in its column */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .menu-grid {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items on mobile */
+    }
+
+    .menu-item {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+        text-align: center; /* Center align text */
+    }
+
+    .menu-item img {
+        margin: 0 auto; /* Center image */
+    }
+}
+
+  
+  
