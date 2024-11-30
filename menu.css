@@ -3,123 +3,183 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
-}
-
-/* Header styling */
-header {
+  }
+  
+  /* Header styling */
+  header {
     text-align: center;
     padding: 20px 0;
     background-color: #ffcc99;
-}
-
-header h1 {
+  }
+  
+  header h1 {
     font-size: 3rem;
     color: #4b3621;
-}
-
-/* Menu grid layout for flexible columns */
-.menu-grid {
+  }
+  
+  /* Menu grid layout for flexible columns */
+  .menu-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
     justify-content: center;
-}
-
-/* Category section */
-.menu-category {
+  }
+  
+  /* Category section */
+  .menu-category {
     width: 100%;
-}
-
-/* Category headers */
-.menu-category h2 {
+  }
+  
+  /* Category headers */
+  .menu-category h2 {
     font-size: 2rem;
     color: #4b3621;
     margin-bottom: 20px;
     text-align: center;
-}
-
-/* Menu item styling */
-.menu-item {
-    display: grid; /* Use grid for layout */
-    grid-template-columns: 300px auto 100px; /* Fixed image size, content, and price */
-    align-items: center; /* Align items vertically */
-    gap: 10px; /* Space between columns */
+  }
+  
+  /* Menu item styling */
+  .menu-item {
+    display: flex;
+    flex-direction: row;  /* Align items horizontally */
+    justify-content: space-between;  /* Space between the image/description and the price */
     background-color: #fff;
     border: 2px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%; /* Full width of container */
-    max-width: 800px; /* Limit maximum width */
+    width: 100%;   /* Start with full width */
     padding: 10px;
-    margin: 0 auto; /* Center items */
+    flex: 1 1 calc(50% - 20px);  /* Flex properties for responsive 2-column layout */
+    height: 200px;  /* Set a fixed height for consistency */
+    position: relative;  /* So price can be positioned correctly */
+  }
+/* Back Button Container */
+.back-button-container {
+  display: block;
+  padding-left: 20px;
+  margin: 20px 0;  /* Adds vertical spacing */
 }
 
-/* Menu item hover effects */
-.menu-item:hover {
+/* Back Button Styling */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #4b3621;
+  border: 2px solid #ffcc99;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-left: 0;  /* Ensure no margin pushes it to center */
+  text-align: left;  /* Align text to the left */
+}
+/* Footer Styling */
+.footer {
+    background-color: #4b3621;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-container p {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Ensuring footer looks good on mobile and desktop */
+  @media (max-width: 768px) {
+    .footer {
+      font-size: 1rem;
+    }
+  }
+  
+.back-button:hover {
+    background-color: #ffcc99;
+    color: #4b3621;
+    transform: scale(1.1);
+}
+
+.back-button:active {
+    background-color: #dba676;
+    transform: scale(0.95);
+}
+
+/* Centering on smaller screens */
+.back-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+  
+  /* Menu item hover effects */
+  .menu-item:hover {
     transform: scale(1.05);
     box-shadow: 0px 8px 15px rgba(255, 153, 51, 0.6);
-}
-
-/* Menu image */
-.menu-item img {
+  }
+  
+  /* Menu image */
+  .menu-item img {
     width: 300px;
     height: 200px;
     border-radius: 10px;
-    object-fit: cover; /* Ensures consistent aspect ratio */
-}
-
-/* Menu info */
-.menu-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.menu-info h3 {
+    object-fit: cover;
+    margin-right: 15px; /* Space between image and description */
+  }
+  
+  /* Menu info */
+  .menu-info {
+    flex-grow: 1;  /* Take up remaining space */
+  }
+  
+  .menu-info h3 {
     font-size: 1.2rem;
     color: #4b3621;
     margin-bottom: 5px;
-}
-
-.menu-info p {
+  }
+  
+  .menu-info p {
     font-size: 0.9rem;
     color: #555;
     margin-bottom: 10px; /* Space between description and price */
-}
-
-/* Price Section */
-.menu-price {
+  }
+  
+  /* Price Section */
+  .menu-price {
     font-size: 1.1rem;
     font-weight: bold;
     color: #4b3621;
-    text-align: center; /* Center text in its column */
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
+    align-self: center;  /* Vertically center the price */
+    margin-left: 10px;  /* Space between description and price */
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
     .menu-grid {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: center; /* Center items on mobile */
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center items on mobile */
     }
-
+  
     .menu-item {
-        grid-template-columns: 1fr; /* Stack items in a single column */
-        text-align: center; /* Center align text */
+      width: 100%;  /* Take up full width on mobile */
+      height: auto;  /* Let height adjust to content on mobile */
     }
-
-    .menu-item img {
-        margin: 0 auto; /* Center image */
-    }
-}
-
+  }
   
   

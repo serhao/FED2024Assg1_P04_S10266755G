@@ -17,7 +17,22 @@ body {
   h1 {
     font-size: 2.5rem;
   }
-  
+  /* Back Button Styling */
+  .back-button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #4b3621;
+    border: 2px solid #ffcc99;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
   /* Cats Section Container */
   .cats-section {
     padding: 20px;

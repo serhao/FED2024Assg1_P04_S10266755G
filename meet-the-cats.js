@@ -34,4 +34,27 @@ function adjustCardLayout() {
   
   // Re-adjust layout when resizing the window
   window.addEventListener('resize', adjustCardLayout);
-  
+// Add hover effect to the back button
+function addBackButtonHoverEffect() {
+  const backButton = document.querySelector('.back-button');
+
+  if (backButton) {
+    backButton.addEventListener('mouseenter', () => {
+      backButton.style.backgroundColor = '#ffcc99';
+      backButton.style.color = '#4b3621';
+      backButton.style.transform = 'scale(1.1)';
+      backButton.style.transition = 'background-color 0.3s, transform 0.3s ease';
+    });
+
+    backButton.addEventListener('mouseleave', () => {
+      backButton.style.backgroundColor = '#4b3621';
+      backButton.style.color = '#fff';
+      backButton.style.transform = 'scale(1)';
+    });
+  }
+}
+
+// Run function on page load
+window.addEventListener('load', () => {
+  addBackButtonHoverEffect();
+});
