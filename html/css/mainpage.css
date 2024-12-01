@@ -1,0 +1,184 @@
+/* Universal Reset for all elements */
+body, h1, h2, p, ul, li {
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width/height */
+}
+
+/* Global styling for body */
+body {
+  font-family: Arial, sans-serif; /* Sets the font style for the page */
+  line-height: 1.6; /* Increases line height for better readability */
+  color: #333; /* Sets text color to dark gray */
+  background-color: #f9f9f9; /* Sets a light gray background color */
+}
+
+/* Header styling */
+header {
+  background-color: #ffefd5; /* Light peach background color */
+  text-align: center; /* Centers the text in the header */
+  padding: 1rem; /* Adds padding around the header */
+  border-bottom: 2px solid #ffa07a; /* Adds a border at the bottom of the header */
+}
+
+/* Styling for the header h1 */
+header h1 {
+  font-size: 2.5rem; /* Large font size for the main title */
+  color: #ff4500; /* Bright orange color for the title */
+  margin-bottom: 0.5rem; /* Adds space below the title */
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: #ffa07a; /* Orange background for the navigation */
+  width: 100%; /* Ensures the navigation bar spans the full width of the page */
+}
+
+/* Navigation menu list styling */
+nav ul {
+  display: flex; /* Arranges navigation items horizontally */
+  justify-content: space-around; /* Evenly spaces items */
+  list-style: none; /* Removes bullet points from list */
+  margin: 0; /* Removes default margin */
+  padding: 0.5rem 0; /* Adds padding to the top and bottom */
+}
+
+/* Navigation list item styling */
+nav ul li {
+  flex-grow: 1; /* Ensures each item takes up equal space */
+  text-align: center; /* Centers the text within each item */
+}
+
+/* Navigation links styling */
+nav ul li a {
+  text-decoration: none; /* Removes underlines from links */
+  font-size: 1.2rem; /* Sets the font size for links */
+  color: white; /* Sets text color to white */
+  padding: 0.5rem; /* Adds padding around the links */
+  display: block; /* Makes the link take up the full space of the list item */
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Main content section styling */
+main {
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: flex-start; /* Aligns content to the top */
+  padding: 2rem; /* Adds padding around the main content */
+}
+
+/* Intro section styling */
+.intro-section {
+  display: flex; /* Uses flexbox for layout */
+  max-width: 1200px; /* Sets a maximum width for the intro section */
+  width: 100%; /* Ensures it spans the full width */
+  gap: 2rem; /* Adds space between the text and image */
+  flex-wrap: wrap; /* Allows items to wrap onto the next line if necessary */
+}
+
+/* Styling for the intro text */
+.intro-text {
+  flex: 1; /* Allows the text section to take up remaining space */
+}
+
+/* Styling for the intro section heading */
+.intro-text h2 {
+  font-size: 1.8rem; /* Sets font size for the section heading */
+  color: #333; /* Sets text color to dark gray */
+  margin-bottom: 1rem; /* Adds space below the heading */
+}
+
+/* Styling for intro paragraph */
+.intro-text p {
+  font-size: 1rem; /* Sets the font size for the paragraph */
+  line-height: 1.8; /* Increases line height for readability */
+}
+
+/* Styling for the intro image container */
+.intro-image {
+  flex: 1; /* Allows the image container to take up remaining space */
+  display: flex; /* Uses flexbox to center the image */
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+}
+
+/* Styling for the image itself */
+.intro-image img {
+  max-width: 100%; /* Ensures the image doesn't exceed its container */
+  height: auto; /* Maintains the aspect ratio of the image */
+  border: 2px solid #ffa07a; /* Adds a border around the image */
+  border-radius: 10px; /* Rounds the corners of the image */
+}
+
+/* Footer section styling */
+footer {
+  text-align: center; /* Centers the text in the footer */
+  background-color: #ffefd5; /* Light peach background */
+  padding: 1rem; /* Adds padding around the footer */
+  border-top: 2px solid #ffa07a; /* Adds a border at the top of the footer */
+  margin-top: 2rem; /* Adds space between the main content and footer */
+}
+
+/* Footer text styling */
+footer p {
+  font-size: 0.9rem; /* Smaller font size for the footer text */
+}
+
+/* Media query for screen widths 768px or smaller (e.g., tablets) */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem; /* Reduces the font size for smaller screens */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stacks navigation items vertically */
+  }
+
+  nav ul li {
+    margin-bottom: 0.5rem; /* Adds space between stacked navigation items */
+  }
+
+  .intro-section {
+    flex-direction: column; /* Stacks the text and image vertically */
+    padding: 1rem; /* Reduces padding for smaller screens */
+  }
+
+  .intro-text {
+    flex: none; /* Prevents the text section from growing */
+    text-align: center; /* Centers the text */
+    margin-bottom: 1rem; /* Adds space below the text */
+  }
+
+  .intro-image {
+    flex: none; /* Prevents the image section from growing */
+    text-align: center; /* Centers the image */
+  }
+
+  .intro-image img {
+    width: 100%; /* Makes the image take up the full width of the container */
+  }
+
+  .intro-text p {
+    font-size: 0.9rem; /* Reduces font size for better readability */
+  }
+}
+
+/* Media query for screen widths 480px or smaller (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+  .intro-section {
+    flex-direction: column-reverse; /* Reverses the order of text and image */
+  }
+
+  nav ul li a {
+    font-size: 1rem; /* Reduces font size for mobile screens */
+    padding: 0.8rem; /* Adds more padding around the navigation items */
+  }
+
+  footer p {
+    font-size: 0.8rem; /* Reduces footer text size */
+  }
+}
+
+
+  
+  

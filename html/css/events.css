@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+  margin: 0; /* Removes default margin from all elements */
+  padding: 0; /* Removes default padding from all elements */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Sets the font of the body */
+  background-color: #f0f0f0; /* Sets a light gray background for the body */
+  color: #333; /* Sets the text color to dark gray */
+}
+
+/* Back Button */
+.back-button-container {
+  margin: 10px 20px; /* Adds margin around the back button container */
+}
+
+.back-button {
+  display: inline-block; /* Makes the button inline but able to have width and height */
+  padding: 10px 20px; /* Adds padding inside the button */
+  font-size: 1rem; /* Sets the font size for the text in the button */
+  font-weight: bold; /* Makes the text bold */
+  color: white; /* Sets the text color to white */
+  background-color: #4b3621; /* Sets the background color of the button */
+  border: 2px solid #ffcc99; /* Adds a border with a light color */
+  border-radius: 8px; /* Rounds the corners of the button */
+  text-decoration: none; /* Removes underline from the link */
+}
+
+/* Event Header Section */
+.event-header {
+  background-color: #ffcc99; /* Sets the background color of the header */
+  text-align: center; /* Centers the text in the header */
+  padding: 40px; /* Adds padding inside the header */
+}
+
+.event-header h1 {
+  font-size: 3rem; /* Sets a large font size for the title */
+  color: #4b3621; /* Sets the text color for the title */
+}
+
+/* Event Now Section */
+.event-now {
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Distributes space between elements */
+  align-items: center; /* Aligns the items vertically in the center */
+  gap: 20px; /* Adds space between the items */
+  padding: 20px; /* Adds padding inside the section */
+}
+
+.event-now-text {
+  flex: 70%; /* Sets this section to take up 70% of the space */
+}
+
+.event-now-text h2 {
+  font-size: 2rem; /* Sets the font size for the subheading */
+  color: #4b3621; /* Sets the text color for the subheading */
+  margin-bottom: 10px; /* Adds space below the subheading */
+}
+
+.event-now-text p {
+  font-size: 1rem; /* Sets the font size for the paragraph */
+  line-height: 1.6; /* Sets the line height for better readability */
+}
+
+.event-now-image {
+  flex: 30%; /* Sets this section to take up 30% of the space */
+}
+
+.event-now-image img {
+  width: 100%; /* Makes the image take up 100% of the container's width */
+  border-radius: 8px; /* Rounds the corners of the image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow to the image */
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Distributes space between items */
+  gap: 20px; /* Adds space between the events */
+  padding: 20px; /* Adds padding inside the section */
+}
+
+.upcoming-event {
+  width: 48%; /* Makes each event take up 48% of the container's width */
+}
+
+.upcoming-event h3 {
+  font-size: 1.5rem; /* Sets the font size for the event title */
+  color: #4b3621; /* Sets the text color for the event title */
+  margin-bottom: 10px; /* Adds space below the event title */
+}
+
+.event-info img {
+  width: 100%; /* Makes the image take up 100% of the container's width */
+  border-radius: 8px; /* Rounds the corners of the image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow to the image */
+}
+
+.event-info p {
+  font-size: 1rem; /* Sets the font size for the event description */
+  margin-top: 10px; /* Adds space above the description */
+  line-height: 1.5; /* Sets the line height for better readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-now {
+      flex-direction: column; /* Stacks the event sections vertically on small screens */
+      text-align: center; /* Centers the text */
+  }
+
+  .event-now-text,
+  .event-now-image {
+      flex: 100%; /* Makes the text and image sections take up 100% of the width */
+  }
+
+  .upcoming-events {
+      flex-direction: column; /* Stacks the upcoming events vertically on small screens */
+  }
+
+  .upcoming-event {
+      width: 100%; /* Makes each upcoming event take up 100% of the width */
+      margin-bottom: 20px; /* Adds space below each upcoming event */
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #4b3621; /* Sets the background color of the footer */
+  color: #fff; /* Sets the text color to white */
+  text-align: center; /* Centers the text in the footer */
+  padding: 20px 0; /* Adds padding inside the footer */
+  position: relative; /* Keeps the footer in place */
+  bottom: 0; /* Positions the footer at the bottom */
+  width: 100%; /* Makes the footer take up the full width of the page */
+}
+
+.footer-container p {
+  font-size: 1rem; /* Sets the font size for the footer text */
+  margin: 0; /* Removes default margin from the footer text */
+}

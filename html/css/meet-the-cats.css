@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text for contrast */
+  }
+  
+  header {
+    text-align: center;
+    padding: 30px;
+    background-color: #007BFF; /* Blue header */
+    color: white; /* White text in header */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  /* Back Button Styling */
+  .back-button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #4b3621;
+    border: 2px solid #ffcc99;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  /* Cats Section Container */
+  .cats-section {
+    padding: 20px;
+    background-color: #ffffff; /* White background for content */
+  }
+  
+  /* Flex container for cat cards */
+  .cats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Cat card styles */
+  .cat-card {
+    background-color: #ffffff; /* White background for cards */
+    border: 2px solid #007BFF; /* Blue border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cat-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Text inside each cat card */
+  .cat-description {
+    padding: 10px;
+    color: #007BFF; /* Blue text for description */
+  }
+  
+  /* Hover effect for cat cards */
+  .cat-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly darker shadow on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cat-card {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cat-card {
+      width: 100%;
+    }
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #007BFF; /* Blue footer */
+    color: white; /* White text in footer */
+    padding: 10px;
+  }
+  
+  
