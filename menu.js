@@ -1,13 +1,18 @@
-// Get all menu items
-const menuItems = document.querySelectorAll('.menu-item');
+document.addEventListener("DOMContentLoaded", function () {
+  const menuItems = document.querySelectorAll(".menu-item");
 
-// Add event listeners for hover effects
-menuItems.forEach((item) => {
-  item.addEventListener('mouseenter', () => {
-    item.classList.add('hover-glow');
-  });
+  menuItems.forEach((item) => {
+    // Add mouseover effect
+    item.addEventListener("mouseover", () => {
+      item.style.transform = "scale(1.05)";
+      item.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+    });
 
-  item.addEventListener('mouseleave', () => {
-    item.classList.remove('hover-glow');
+    // Revert to original state on mouseout
+    item.addEventListener("mouseout", () => {
+      item.style.transform = "scale(1)";
+      item.style.boxShadow = "none";
+    });
   });
 });
+

@@ -1,72 +1,16 @@
-/* General reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-  }
-  
-  /* Header styling */
-  header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #ffcc99;
-  }
-  
-  header h1 {
-    font-size: 3rem;
-    color: #4b3621;
-  }
-  
-  /* Menu grid layout for flexible columns */
-  .menu-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-  }
-  
-  /* Category section */
-  .menu-category {
-    width: 100%;
-  }
-  
-  /* Category headers */
-  .menu-category h2 {
-    font-size: 2rem;
-    color: #4b3621;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  /* Menu item styling */
-  .menu-item {
-    display: flex;
-    flex-direction: row;  /* Align items horizontally */
-    justify-content: space-between;  /* Space between the image/description and the price */
-    background-color: #fff;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%;   /* Start with full width */
-    padding: 10px;
-    flex: 1 1 calc(50% - 20px);  /* Flex properties for responsive 2-column layout */
-    height: 200px;  /* Set a fixed height for consistency */
-    position: relative;  /* So price can be positioned correctly */
-  }
-/* Back Button */
-.back-button-container {
-  margin: 10px 20px;
-  display: flex;
-  justify-content: flex-start; /* Align the button to the left */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fef5e7;
+}
+
+.menu-header {
+  background-color: #ffcc99;
+  color: #4b3621;
+  text-align: center;
+  padding: 20px;
+  font-size: 2.5rem;
 }
 
 .back-button {
@@ -80,120 +24,61 @@
   border-radius: 8px;
   text-decoration: none;
   transition: transform 0.3s, background-color 0.3s;
+  margin: 20px;
 }
 
 .back-button:hover {
   background-color: #ffcc99;
-  color: #4b3621;
   transform: scale(1.05);
 }
 
-.back-button:active {
-  background-color: #dba676;
-  transform: scale(0.95);
+/* Menu item layout */
+.menu-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ffcc99;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Responsive adjustment */
-@media (max-width: 768px) {
-  .back-button-container {
-    justify-content: center; /* Center the button on smaller screens */
-  }
+/* Image on the left */
+.menu-item img {
+  width: 120px; /* Fixed width for uniformity */
+  height: auto;
+  border-radius: 8px;
+  margin-right: 15px;
 }
 
-/* Footer Styling */
-.footer {
-    background-color: #4b3621;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer-container p {
-    font-size: 1rem;
-    font-weight: normal;
-    margin: 0;
-  }
-  
-  /* Ensuring footer looks good on mobile and desktop */
-  @media (max-width: 768px) {
-    .footer {
-      font-size: 1rem;
-    }
-  }
-  
-.back-button:hover {
-    background-color: #ffcc99;
-    color: #4b3621;
-    transform: scale(1.1);
+/* Info block: Name, description, and price */
+.menu-info {
+  flex: 1; /* Takes up the remaining space */
 }
 
-.back-button:active {
-    background-color: #dba676;
-    transform: scale(0.95);
+.menu-info h3 {
+  font-size: 1.2rem;
+  margin: 0 0 5px 0;
+  color: #4b3621; /* Dark brown for the title */
 }
 
-/* Centering on smaller screens */
-.back-button-container {
-    display: flex;
-    justify-content: center;
+.menu-info p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #333; /* Dark gray for text */
 }
 
-  
-  /* Menu item hover effects */
-  .menu-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 15px rgba(255, 153, 51, 0.6);
-  }
-  
-  /* Menu image */
-  .menu-item img {
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-right: 15px; /* Space between image and description */
-  }
-  
-  /* Menu info */
-  .menu-info {
-    flex-grow: 1;  /* Take up remaining space */
-  }
-  
-  .menu-info h3 {
-    font-size: 1.2rem;
-    color: #4b3621;
-    margin-bottom: 5px;
-  }
-  
-  .menu-info p {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 10px; /* Space between description and price */
-  }
-  
-  /* Price Section */
-  .menu-price {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #4b3621;
-    align-self: center;  /* Vertically center the price */
-    margin-left: 10px;  /* Space between description and price */
-  }
-  
-  /* Media Query for Mobile Devices */
-  @media (max-width: 768px) {
-    .menu-grid {
-      flex-direction: column; /* Stack items vertically on smaller screens */
-      align-items: center; /* Center items on mobile */
-    }
-  
-    .menu-item {
-      width: 100%;  /* Take up full width on mobile */
-      height: auto;  /* Let height adjust to content on mobile */
-    }
-  }
-  
-  
+/* Price formatting */
+.menu-price {
+  font-weight: bold;
+  color: #4b3621; /* Matches title color */
+  margin-top: 10px;
+}
+
+/* Hover effect for each menu item */
+.menu-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
