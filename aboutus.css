@@ -1,145 +1,111 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
-  }
-  
-  header h1 {
-    text-align: center;
-    font-size: 3rem;
-    margin: 20px 0;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 20px 0;
+}
  body {
     font-family: Arial, sans-serif;
     background-color: #beacac;
     color: #333;
  }
 
-  
-  /* Back Button */
-  .back-button-container {
-    margin: 10px 20px;
-  }
-  
-  .back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: #4b3621;
-    border: 2px solid #ffcc99;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: transform 0.3s, background-color 0.3s;
-  }
-  
-  .back-button:hover {
-    background-color: #ffcc99;
-    transform: scale(1.05);
-  }
-  
-  /* First Row: Text and Image Layout */
-  .about-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .about-text {
-    flex: 70%;
-  }
-  
-  .about-text h2 {
-    font-size: 2rem;
-    color: #4b3621;
-    margin-bottom: 10px;
-  }
-  
-  .about-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .about-image {
-    flex: 30%;
-  }
-  
-  .about-image img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Second Row: Four Images */
-  .image-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-  }
-  
-  .image-row img {
-    width: 22%; /* Adjust for spacing */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .image-row img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Responsive Design for Mobile */
-  @media (max-width: 768px) {
-    .about-section {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-text,
-    .about-image {
-      flex: 100%;
-    }
-  
-    .about-image img {
-      margin-top: 20px;
-    }
-  
-    .image-row img {
-      width: 45%; /* Adjust size for smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .image-row img {
-      width: 100%; /* Stack images */
-    }
-  }
-  footer {
-    background-color: #4b3621; /* Dark brown */
-    color: #fff; /* White text */
-    text-align: center;
-    padding: 20px 0;
-    position: relative; /* Ensure it's in the natural flow */
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer-container p {
-    font-size: 1rem;
-    margin: 0;
-  }
+
+/* Back Button */
+.back-button-container {
+  margin: 10px 20px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #4b3621;
+  border: 2px solid #ffcc99;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+
+/* First Row: Text and Image Layout */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.about-text {
+  flex: 70%;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #4b3621;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 30%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Second Row: Four Images */
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.image-row img {
+  width: 22%; /* Default size for images */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+footer {
+  background-color: #4b3621; /* Dark brown */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 20px 0;
+  position: relative; /* Ensure it's in the natural flow */
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
   
   

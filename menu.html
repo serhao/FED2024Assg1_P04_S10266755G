@@ -3,31 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="normalize.css">
+  <!-- Normalize CSS to ensure consistent styling across browsers -->
+  <link rel="stylesheet" href="normalize.css">
   <title>Menu</title>
-  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="menu.css"> <!-- Link to external CSS for styling the menu page -->
 </head>
 <body>
+  <!-- Menu Header -->
   <header class="menu-header">Menu</header>
+
+  <!-- Back Button Section -->
   <div class="back-button-container">
+    <!-- The back button allows the user to navigate back to the main page -->
     <a href="index.html" class="back-button">Back to Main Page</a>
   </div>
 
+  <!-- Main Menu Content -->
   <main class="menu-grid">
-    <!-- Main Food Items -->
+    <!-- Main Food Items Section -->
     <section class="menu-category">
-      <h2>Main Course</h2>
+      <h2>Main Course</h2> <!-- Title for the Main Course section -->
+      <!-- Menu Item 1 -->
       <div class="menu-item">
-        <img src="Cat-Bento-13-of-13-e1569273639448.jpg" alt="Cat Bento">
+        <img src="Cat-Bento-13-of-13-e1569273639448.jpg" alt="Cat Bento"> <!-- Image of the Cat Bento -->
         <div class="menu-info">
-          <h3>Cat Bento</h3>
-          <p>A cute cat bento with fragrant chicken rice and a side of fruits. Great for little kids!</p>
+          <h3>Cat Bento</h3> <!-- Food name -->
+          <p>A cute cat bento with fragrant chicken rice and a side of fruits. Great for little kids!</p> <!-- Description of the food -->
         </div>
         <div class="menu-price">
-          <p>$8.00</p>
+          <p>$8.00</p> <!-- Price of the food item -->
         </div>
       </div>
+      <!-- Repeat similar structure for the rest of the menu items -->
       <div class="menu-item">
         <img src="8dcf8427b432c5df0b69e218f7159025.jpg" alt="Rice with Chicken">
         <div class="menu-info">
@@ -60,9 +67,9 @@
       </div>
     </section>
 
-    <!-- Desserts -->
+    <!-- Desserts Section -->
     <section class="menu-category">
-      <h2>Desserts</h2>
+      <h2>Desserts</h2> <!-- Title for the Desserts section -->
       <div class="menu-item">
         <img src="2-288-1024x1024.jpg" alt="Cat Macarons">
         <div class="menu-info">
@@ -85,9 +92,9 @@
       </div>
     </section>
 
-    <!-- Drinks -->
+    <!-- Drinks Section -->
     <section class="menu-category">
-      <h2>Drinks</h2>
+      <h2>Drinks</h2> <!-- Title for the Drinks section -->
       <div class="menu-item">
         <img src="eeef646579145127079c3ec300982b19.jpg" alt="Catppuchino">
         <div class="menu-info">
@@ -130,11 +137,11 @@
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="footer-container">
-      <p>&copy; Qi Xiang's Cat Café All Rights Reserved.</p>
-    </div>
+  <script src="menu.js"></script>
+  <!-- Footer section at the bottom of the page -->
+  <footer>
+    <!-- Footer text, contains copyright information -->
+    <p>&copy; Qi Xiang's Cat Cafe All Rights Reserved.</p>
   </footer>
 </body>
 </html>

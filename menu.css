@@ -77,8 +77,14 @@ body {
   margin-top: 10px;
 }
 
-/* Hover effect for each menu item */
-.menu-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+footer {
+  text-align: center;
+  background-color: #ffefd5;
+  padding: 1rem;
+  border-top: 2px solid #ffa07a;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 0.9rem;
 }
