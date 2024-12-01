@@ -1,0 +1,112 @@
+/* General Reset */
+* {
+  margin: 0; /* Removes default margin from all elements */
+  padding: 0; /* Removes default padding from all elements */
+  box-sizing: border-box; /* Ensures padding and borders are included in the element's total width and height */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Sets a default font for the page */
+  background-color: #f8f8f8; /* Sets a light background color for the body */
+  color: #333; /* Sets the text color to dark grey */
+}
+
+header h1 {
+  text-align: center; /* Centers the header text */
+  font-size: 3rem; /* Sets the font size of the header */
+  margin: 20px 0; /* Adds vertical space above and below the header */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Ensures body text uses the Arial font */
+  background-color: #beacac; /* Changes the background color of the body */
+  color: #333; /* Ensures the text color remains dark grey */
+}
+
+/* Back Button */
+.back-button-container {
+  margin: 10px 20px; /* Adds margin around the back button container */
+}
+
+.back-button {
+  display: inline-block; /* Makes the button an inline block element */
+  padding: 10px 20px; /* Adds padding inside the button */
+  font-size: 1rem; /* Sets the font size of the button text */
+  font-weight: bold; /* Makes the button text bold */
+  color: white; /* Sets the button text color to white */
+  background-color: #4b3621; /* Sets the background color of the button to a dark brown */
+  border: 2px solid #ffcc99; /* Adds a border with a light orange color around the button */
+  border-radius: 8px; /* Rounds the corners of the button */
+  text-decoration: none; /* Removes underline from the link */
+}
+
+/* First Row: Text and Image Layout */
+.about-section {
+  display: flex; /* Makes the section a flex container */
+  align-items: center; /* Vertically centers the items */
+  justify-content: space-between; /* Distributes the items evenly with space between them */
+  gap: 20px; /* Adds 20px space between the flex items */
+  padding: 20px; /* Adds padding around the section */
+}
+
+.about-text {
+  flex: 70%; /* Makes the text section take up 70% of the space */
+}
+
+.about-text h2 {
+  font-size: 2rem; /* Sets the font size for the subheading */
+  color: #4b3621; /* Sets the color of the subheading text to dark brown */
+  margin-bottom: 10px; /* Adds space below the subheading */
+}
+
+.about-text p {
+  font-size: 1rem; /* Sets the font size for the paragraph */
+  line-height: 1.6; /* Sets the line height to 1.6 for better readability */
+}
+
+.about-image {
+  flex: 30%; /* Makes the image section take up 30% of the space */
+}
+
+.about-image img {
+  width: 100%; /* Makes the image fill the container */
+  border-radius: 8px; /* Rounds the corners of the image */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the image */
+}
+
+/* Second Row: Four Images */
+.image-row {
+  display: flex; /* Makes the row of images a flex container */
+  justify-content: space-between; /* Distributes the images with space between them */
+  align-items: center; /* Vertically aligns the images */
+  gap: 10px; /* Adds 10px gap between each image */
+  padding: 20px; /* Adds padding around the image row */
+}
+
+.image-row img {
+  width: 22%; /* Sets the default size for the images to 22% of the row's width */
+  border-radius: 8px; /* Rounds the corners of the images */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the images */
+  transition: transform 0.3s, box-shadow 0.3s; /* Adds smooth transition effects for transformations and shadows */
+}
+
+/* Footer */
+footer {
+  background-color: #4b3621; /* Sets a dark brown background color for the footer */
+  color: #fff; /* Sets the text color in the footer to white */
+  text-align: center; /* Centers the footer text */
+  padding: 20px 0; /* Adds vertical padding in the footer */
+  position: relative; /* Ensures the footer is positioned naturally within the page flow */
+  bottom: 0; /* Places the footer at the bottom of the page */
+  width: 100%; /* Ensures the footer spans the full width of the page */
+}
+
+.footer-container p {
+  font-size: 1rem; /* Sets the font size of the text in the footer */
+  margin: 0; /* Removes any default margin around the text */
+}
+
+
+
+  
+  
